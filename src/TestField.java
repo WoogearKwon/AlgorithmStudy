@@ -8,8 +8,9 @@ public class DataStructure {
         int[] x = {7,6,104,5,6,3,8,9,11,1,4,3,2,3,5,53,3,4};
         int n = x.length;
 
-        //test
+        Arrays.sort(x);
 
+        println(Arrays.toString(x));
     }
 
 
