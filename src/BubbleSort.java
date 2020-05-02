@@ -4,6 +4,7 @@ public class BubbleSort {
 
     static int n;
 
+    // 시간 복잡도: O(n) - O(n^2) - O(n^2)
     public static void main(String[] args) {
 //        int x[] = {7, 22, 5, 11, 32, 120, 68, 70};
 //        int x[] = {5, 4, 3, 2, 1};

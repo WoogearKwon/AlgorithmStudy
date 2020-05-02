@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class ShellSort {
     static int count = 0;
 
+    // 시간 복잡도: O(n) - O(nlog n^2) - O(nlog n^2)
     public static void main(String[] args) {
 //        int[] x = {7, 22, 5, 11, 32, 120, 68, 2};
 //        int[] x = {8,1,4,2,7,6,3,5};

@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 public class MergeSort {
     static int[] buff; // 작업용 배열
 
+    // 시간 복잡도: O(nlog n) - O(nlog n) - O(nlog n)
     public static void main(String[] args) {
 //        executeMergeSort();
 //        sortCalendar();
