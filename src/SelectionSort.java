@@ -12,8 +12,10 @@ public class SelectionSort {
         println(Arrays.toString(x));
     }
 
-    // 단순 삽입 정렬 (straight selection sort)
-    // i가 0부터 증가함에 따라 정렬되지 않은 요소 중 가장 작은 값으로 교환하는 방식
+     /**
+     단순 삽입 정렬 (straight selection sort)
+     i가 0부터 증가함에 따라 정렬되지 않은 요소 중 가장 작은 값으로 교환하는 방식
+     */
     static void selectionSort(int[] a, int n) {
         for (int i = 0; i < n - 1; i++) {
             int min = i; // 아직 정렬되지 않은 부분에서 가장 작은 요소의 인덱스를 기록

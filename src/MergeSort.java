@@ -34,9 +34,11 @@ public class MergeSort {
         }
     }
 
-    // 자연 정렬
-    // GregorianCalendar 클래스는 Comparable 인터페이스와 compareTo() 메서드를 구현함
-    // 1~12월을 0~11으로 표현 => 때문에 .get(MONTH)에 의해 얻는 값은 0~11이므로 출력할 때는 1을 더해야 한다.
+    /**
+     자연 정렬
+     GregorianCalendar 클래스는 Comparable 인터페이스와 compareTo() 메서드를 구현함
+     1~12월을 0~11으로 표현 => 때문에 .get(MONTH)에 의해 얻는 값은 0~11이므로 출력할 때는 1을 더해야 한다.
+     */
     static void sortCalendar() {
         GregorianCalendar[] x = {
                 new GregorianCalendar(2017, Calendar.NOVEMBER, 1),

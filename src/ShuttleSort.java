@@ -11,8 +11,10 @@ public class ShuttleSort {
         println(Arrays.toString(x));
     }
 
-    // 단순 삽입 정렬 (straight insertion sort)
-    // i의 값이 증가함에 따라 a[i]의 값을 정렬된 부분 중 맞는 위치에 삽입
+    /**
+    단순 삽입 정렬 (straight insertion sort)
+     i의 값이 증가함에 따라 a[i]의 값을 정렬된 부분 중 맞는 위치에 삽입
+    */
     static void insertSort(int[] a, int n) {
         for (int i = 0; i < n; i++) {
             int j;

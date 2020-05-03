@@ -26,9 +26,11 @@ public class QuickSort {
         a[idx2] = t;
     }
 
-    // 스택 사용 (비재귀적 퀵정렬)
-    // LIFO(후입선출)이기 때문에 아래 quickSort1()과 순서가 다름
-    // * 요소의 개수가 많은 그룹을 먼저 스택에 푸시하면 더 적은 스택용량을 사용할 수 있음
+    /**
+    스택 사용 (비재귀적 퀵정렬)
+    LIFO(후입선출)이기 때문에 아래 quickSort1()과 순서가 다름
+    요소의 개수가 많은 그룹을 먼저 스택에 푸시하면 더 적은 스택용량을 사용할 수 있음
+    */
     static void quickSort2(int[] a, int left, int right) {
         IntStack lStack = new IntStack(right - left + 1);
         IntStack rStack = new IntStack(right - left + 1);

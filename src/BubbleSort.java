@@ -21,9 +21,11 @@ public class BubbleSort {
         println("sorted array = " + Arrays.toString(x));
     }
 
-    // 개선4: 네번째 x[] 의 경우 bubbleSort3()을 사용해도 빠른 정렬이 안된다.
-    // 홀수번째 패스는 가장 작은 요소를 맨 앞으로 옮기고,
-    // 짝수번째 패스는 가장 큰 요소를 맨 뒤로 옮기는 방식을 사용
+    /**
+     개선4: 네번째 x[] 의 경우 bubbleSort3()을 사용해도 빠른 정렬이 안된다.
+     홀수번째 패스는 가장 작은 요소를 맨 앞으로 옮기고,
+     짝수번째 패스는 가장 큰 요소를 맨 뒤로 옮기는 방식을 사용
+     */
     static void bubbleSort4(int[] x) {
         int k = 0;
 
