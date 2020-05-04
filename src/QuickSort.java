@@ -6,7 +6,9 @@ public class QuickSort {
 
     static int count = 0;
 
-    // 시간 복잡도: O(nlog n) - O(nlog n) - O(n^2)
+    /**
+     * 시간 복잡도: O(nlog n) - O(nlog n) - O(n^2)
+     * */
     public static void main(String[] args) {
         int[] x = {1,8,7,4,5,2,6,3,9};
 //        int[] x = {5,8,4,2,6,10,8,3,9,7};
