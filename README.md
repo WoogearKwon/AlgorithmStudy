@@ -1,25 +1,35 @@
 # 알고리즘 공부 기록
 
-20.05.05
+20.04.24
 --------
-1. PracticeField.java
-: 실습 클래스
+- QueenAlgorithm
+n개의 여왕 풀이
 
-2. QueenAlgorithm
-: n개의 여왕 풀이
+- 버블정렬 (BubbleSort)
 
-3. BubbleSort (버블정렬)
+- 단순선택정렬 (SelectionSort)
 
-4. SelectionSort (단순선택정렬)
+- 단순삽입 정렬/셔틀정렬 (ShuttleSort)
 
-5. ShuttleSort (단순삽입 정렬, 셔틀정렬)
 
-5. ShellSort (셸정렬)
+## 20.04.27
+- 셸 정렬(ShellSort) : 단순 삽입 정렬을 개선해서 속도를 빠르게 함
 
-6. QuickSort (퀵정렬)
+## 20.04.28
+- 퀵 정렬 (QuickSort) : 피벗 기준으로 분할 정렬
 
-7. MergeSort (병합정렬)
+## 20.04.30
 
-8. HeapSort (힙정렬)
+- 병합 정렬 (MergeSort) : 중앙값을 기준으로 분할 정렬 후 병합 과정 반복
 
-9. FrequencySort (도수정렬)
+## 20.05.02
+
+- 힙 정렬 (HeapSort) : 배열을 힙상태(완전이진트리)로 만든 후 힙의 특성을 사용해서 정렬
+
+부모의 값은 항상 자식의 값보다 크거나 작다.
+
+## 20.05.04
+도수 정렬 (FrequencySort)
+
+도수분포표 -> 누적도수분포표 -> 목적배열 -> 배열 복사 순서로 정렬
+
