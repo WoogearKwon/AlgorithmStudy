@@ -9,7 +9,7 @@ public class HeapSort {
      힙정렬은 힙으로 만드는 작업을 요소의 개수만큼 반복하므로 시간복잡도의 값이 크게 줄어든다.
      */
     public static void main(String[] args) {
-        int[] x = {22,5,11,32,120,68,70};
+        int[] x = {1,55,33,38,7,9,51,3,18,47,33};
 //        int[] x = {2,1,8,65,4,8,1,3,4,8,2,1,6};
 
         println("====original====");
@@ -52,9 +52,9 @@ public class HeapSort {
     static void downHeap(int[] a, int pRoot, int pLast) {
         int rootValue = a[pRoot]; // 루트(부모)
         int pChild;                 // 큰 값을 가진 노드
-        int pParent = pRoot;        // 부모
+        int pParent;        // 부모
 
-        for (; pParent < (pLast + 1) / 2; pParent = pChild) {  // (pLast + 1) / 2 ===> 마지막 요소의 부모 노드까지만 반복함
+        for (pParent = pRoot; pParent < (pLast + 1) / 2; pParent = pChild) {  // (pLast + 1) / 2 ===> 마지막 요소의 부모 노드까지만 반복함
             int cl = pParent * 2 + 1; // left child
             int cr = cl + 1;          // right child
             pChild = (cr <= pLast && a[cr] > a[cl]) ? cr : cl; // 2개의 차일드 중 큰 값을 가진 노드 (cr 혹은 cl)

@@ -7,13 +7,12 @@ public class PracticeField {
     static int[] buff;
 
     public static void main(String[] args) {
-        int[] x = {1,55,33,38,7,9,51,3,18,47};
+        int[] x = {1,55,33,38,7,9,51,3,18,47,33};
 //        int[] x = {22,5,11,32,120,68,70};
         int n = x.length;
 
 
-        println("====finished====");
-        println(Arrays.toString(x));
+
     }
 
 
