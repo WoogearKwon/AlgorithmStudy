@@ -4,8 +4,8 @@ public class StringSearch {
      * 문자열 검색 알고리즘
      * */
     public static void main(String[] args) {
-        String text = "ABABCDEFGHA";  // 원본 텍스트
-        String pattern = "ABC";     // 검색할 텍스트
+        String text = "ABCXDEZCACACABAC";  // 원본 텍스트
+        String pattern = "CABA";     // 검색할 텍스트
 
 //        int idx = bfMatch(text, pattern);
 //        int idx = kmpMatch(text, pattern);
@@ -16,6 +16,7 @@ public class StringSearch {
         else {
             printResult(idx, text, pattern);
         }
+
     }
 
     static void printResult(int idx, String text, String pattern) {
@@ -92,30 +93,30 @@ public class StringSearch {
      * 일치하지 않는 문자가 있으면 미리 준비한 표에 따라 패턴을 옮길 크기를 정함
      * 패턴에 존재할 수 있는 모든 문자의 옮길 크기를 계산 => 건너뛰기 표의 요소 개수 = Character.MAX_VALUE + 1
      * */
+
     static int bmMatch(String txt, String pat) {
         int pt;                     // txt 커서
         int pp;                     // pat 커서
         int txtLen = txt.length();  // txt의 문자 개수
-        int patLen = pat.length();  // pat의 문자 개수
-        int[] skip = new int[Character.MAX_VALUE + 1]; // 건너뛰기 표
+        int n = pat.length();       // pat의 문자 개수
+        int[] skip = new int[Character.MAX_VALUE + 1]; //  skip table (건너뛰기 표)
 
-         // 건너뛰기 표 만들기
-         for (pt = 0; pt <= Character.MAX_VALUE; pt++) skip[pt] = patLen;
-         for (pt = 0; pt < patLen - 1; pt++) skip[pat.charAt(pt)] = patLen - pt - 1; // pt == patLen - 1
+        // 건너뛰기 테이블(skip table) 만들기
+        for (pt = 0; pt <= Character.MAX_VALUE; pt++) skip[pt] = n; // 우선 skip[]의 모든 요소들의 값을 n으로 한다.
+        for (pt = 0; pt < n - 1; pt++) skip[pat.charAt(pt)] = n - pt - 1; // pat의 문자들에 대한 skip[]의 값을 정해준다. (n-1 위치의 문자는 무시)
 
         //검색
         while (pt < txtLen) {
-            pp = patLen - 1;
+            pp = n - 1;
 
             while (txt.charAt(pt) == pat.charAt(pp)) {
                 if (pp == 0) return pt; // 검색 성공
                 pp--;
                 pt--;
             }
-            pt += (skip[txt.charAt(pt)] > patLen - pp) ? skip[txt.charAt(pt)] : patLen - pp;
+            pt += (skip[txt.charAt(pt)] > n - pp) ? skip[txt.charAt(pt)] : n - pp;
         }
-        return -1; // 검색 실패
-
+        return -1; // while 문이 종료되면 검색 실패
     }
 
     static void println(String txt) {
