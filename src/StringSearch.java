@@ -4,16 +4,12 @@ public class StringSearch {
      * 문자열 검색 알고리즘
      * */
     public static void main(String[] args) {
-        String text = "ABCFI이지스DEF";  // 원본 텍스트
-        String pattern = "이지스";     // 검색할 텍스트
+        String text = "ABABCDEFGHA";  // 원본 텍스트
+        String pattern = "ABC";     // 검색할 텍스트
 
-        int idx = bfMatch(text, pattern);
-
-//        if (idx == -1) {
-//            println("텍스트에 패턴이 없음");
-//        } else {
-//            println((idx + 1) + "번째 문자부터 일치");
-//        }
+//        int idx = bfMatch(text, pattern);
+//        int idx = kmpMatch(text, pattern);
+        int idx = bmMatch(text, pattern);
 
         if (idx == -1)
             System.out.println("텍스트에 패턴이 없습니다.");
@@ -54,6 +50,73 @@ public class StringSearch {
         return -1;                               // 검색 실패
     }
 
+    /**
+     * 고안자 Knuth, Morris, Pratt의 앞글자를 따서 지은 이름
+     * 브루트-포스에 비해 효율적
+     * 이전에 검사했던 위치의 결과를 버리지 않고 활용함
+     * 그러나 복잡하고 성능이 Boyer-Moore법과 비교해 같거나 좋지 않음, 실제 거의 사용하지 않음
+     * */
+    static int kmpMatch(String txt, String pat) {
+        int pt = 1;                             // txt 커서
+        int pp = 0;                             // patter 커서
+        int[] skip = new int[pat.length() + 1]; // 건너뛰기 표
+
+        // 건너뛰기 표 만들기
+        skip[pt] = 0;
+        while (pt != pat.length()) {
+            if (pat.charAt(pt) == pat.charAt(pp)) skip[++pt] = ++pp;
+            else if (pp == 0) skip[++pt] = pp;
+            else pp = skip[pp];
+        }
+
+        // 검색
+        pt = pp = 0;
+        while (pt != txt.length() && pp != pat.length()) {
+            if (txt.charAt(pt) == pat.charAt(pp)) {
+                pt++;
+                pp++;
+            } else if (pp == 0) {
+                pt++;
+            } else {
+                pp = skip[pp];
+            }
+        }
+
+        if (pp == pat.length()) return pt - pp;
+        return -1; // 검색 실패
+    }
+
+    /**
+     * R.S.Boyer와 J S.Moore가 만듦
+     * 패턴의 마지막 문자부터 앞쪽으로 검사를 진행하면서
+     * 일치하지 않는 문자가 있으면 미리 준비한 표에 따라 패턴을 옮길 크기를 정함
+     * 패턴에 존재할 수 있는 모든 문자의 옮길 크기를 계산 => 건너뛰기 표의 요소 개수 = Character.MAX_VALUE + 1
+     * */
+    static int bmMatch(String txt, String pat) {
+        int pt;                     // txt 커서
+        int pp;                     // pat 커서
+        int txtLen = txt.length();  // txt의 문자 개수
+        int patLen = pat.length();  // pat의 문자 개수
+        int[] skip = new int[Character.MAX_VALUE + 1]; // 건너뛰기 표
+
+         // 건너뛰기 표 만들기
+         for (pt = 0; pt <= Character.MAX_VALUE; pt++) skip[pt] = patLen;
+         for (pt = 0; pt < patLen - 1; pt++) skip[pat.charAt(pt)] = patLen - pt - 1; // pt == patLen - 1
+
+        //검색
+        while (pt < txtLen) {
+            pp = patLen - 1;
+
+            while (txt.charAt(pt) == pat.charAt(pp)) {
+                if (pp == 0) return pt; // 검색 성공
+                pp--;
+                pt--;
+            }
+            pt += (skip[txt.charAt(pt)] > patLen - pp) ? skip[txt.charAt(pt)] : patLen - pp;
+        }
+        return -1; // 검색 실패
+
+    }
 
     static void println(String txt) {
         System.out.println(txt);

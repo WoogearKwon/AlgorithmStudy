@@ -11,8 +11,6 @@ public class PracticeField {
 //        int[] x = {22,5,11,32,120,68,70};
         int n = x.length;
 
-
-
     }
 
 
