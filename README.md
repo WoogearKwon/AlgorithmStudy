@@ -50,7 +50,7 @@
 - 성능은 좋지 않음 
 #### KMP법
 - 브루트-포스법을 개선해서 좀 더 효율적이지만 복잡하고 성능이 우수하지 않음
-- 스팁 테이블 만들어야 함 
+- 스킵 테이블 만들어야 함 
 - 일치한 패턴을 버리지 않고 기억
 #### Boyer-Moore법: <a href = "https://devwooks.tistory.com/12">(링크)</a> 
 - KMP법보다 효율이 더 우수
@@ -62,9 +62,18 @@
 #### 포인터로 만든 연결리스트 (LinkedList.LinkedList.java)
 - 각 노드의 포인터는 다음 노드를 가리킴 (객체 참조)
 - 메모리 영역을 만들고 해제하는 비용이 듬
-- 포인터로 만든 연결리스트 테스터 (LinkedListTest.java)
+- 포인터로 만든 연결리스트 테스터 (LinkedListTester.java)
 #### 커서로 만든 연결 리스트 (LinkedList.ArrLinkedList.java)
 - 리스트를 배열로 구현
 - 데이터 수가 크게 바뀌지 않고 데이터 수의 최댓값을 미리 알 수 있을 경우 효율적
 - 커서는 다음 노드에 대한 포인터가 아니라 다음 요소가 들어있는 인덱스 값
 - 배열의 순서는 연결리스트의 순서와 상관 없음
+- 단점: 앞쪽의 노드는 찾을 수 없음
+- 연결리스트 테스터 (ArrLinkedListTester.java)
+
+#### 원형 이중 연결리스트 (DoubleLinkedList.java)
+- 노드의 앞쪽(prev)과 다음(next)를 검색할 수 있음
+- head는 더미노드를 가리킴
+- head.prev()는 꼬리 노드를, head.next()는 머리 노드를 선택노드로 변경
+- 리스트가 비어있을 경우 prev, next는 모두 head를 가리킴
+- 이중 연결 리스트 테스터 (DoubleLinkedListTester.java)
