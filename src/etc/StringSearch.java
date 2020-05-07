@@ -1,3 +1,5 @@
+package etc;
+
 public class StringSearch {
 
     /**

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package etc;
 
 /**
 집합을 구현한 클래스

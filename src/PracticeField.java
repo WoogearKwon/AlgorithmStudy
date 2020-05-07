@@ -1,3 +1,4 @@
+import LinkedList.ArrLinkedList;
 import com.sun.org.apache.xml.internal.utils.IntStack;
 
 import java.util.Arrays;
@@ -9,6 +10,20 @@ public class PracticeField {
 
     public static void main(String[] args) {
         int[] x = {1,55,33,38,7,9,51,3,18,47,33};
+
+        ArrLinkedList<String> list = new ArrLinkedList<String>(10);
+        list.addFirst("haha");
+        list.addLast("hoho");
+        list.addLast("keke");
+        list.addLast("AAAA");
+        list.addLast("BBBBB");
+
+        list.removeFirst();
+        list.addLast("LISJEF");
+
+        list.remove(4);
+        list.addLast("@948");
+        list.dump();
     }
 
     public static final Comparator<String> NAME_ORDER = new NameOrderComparator();

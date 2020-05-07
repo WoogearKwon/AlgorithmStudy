@@ -1,3 +1,5 @@
+package etc;
+
 import java.io.PrintStream;
 
 public class QueenAlgorithm {

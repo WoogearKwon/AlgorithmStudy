@@ -1,3 +1,5 @@
+package LinkedList;
+
 import java.util.Comparator;
 
 public class LinkedList<E> {
