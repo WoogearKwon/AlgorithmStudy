@@ -4,8 +4,8 @@ public class StringSearch {
      * 문자열 검색 알고리즘
      * */
     public static void main(String[] args) {
-        String text = "ABCXDEZCACACABAC";  // 원본 텍스트
-        String pattern = "CABA";     // 검색할 텍스트
+        String text = "he is from korea..";  // 원본 텍스트
+        String pattern = "korea";     // 검색할 텍스트
 
 //        int idx = bfMatch(text, pattern);
 //        int idx = kmpMatch(text, pattern);
@@ -16,7 +16,6 @@ public class StringSearch {
         else {
             printResult(idx, text, pattern);
         }
-
     }
 
     static void printResult(int idx, String text, String pattern) {

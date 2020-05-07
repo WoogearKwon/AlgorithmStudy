@@ -1,6 +1,7 @@
 import com.sun.org.apache.xml.internal.utils.IntStack;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class PracticeField {
 
@@ -8,11 +9,15 @@ public class PracticeField {
 
     public static void main(String[] args) {
         int[] x = {1,55,33,38,7,9,51,3,18,47,33};
-//        int[] x = {22,5,11,32,120,68,70};
-        int n = x.length;
-
     }
 
+    public static final Comparator<String> NAME_ORDER = new NameOrderComparator();
+
+    private static class NameOrderComparator implements Comparator<String> {
+        public int compare(String d1, String d2) {
+            return d1.compareTo(d2);
+        }
+    }
 
     static void println(String txt) {
         System.out.println(txt);
