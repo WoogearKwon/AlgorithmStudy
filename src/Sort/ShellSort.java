@@ -23,6 +23,9 @@ public class ShellSort {
         println("count = " + count);
     }
 
+    /**
+     * 증분값(h) 변경 ...13, 4, 1 순으로 감소
+     * */
     static void insert3(int[] a, int n) {
         int h;
         for (h = 1; h < n / 9; h = h * 3 + 1);

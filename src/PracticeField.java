@@ -1,9 +1,6 @@
-import LinkedList.ArrLinkedList;
-import Tree.BinarySearchTree;
 import com.sun.org.apache.xml.internal.utils.IntStack;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class PracticeField {
 
@@ -11,15 +8,12 @@ public class PracticeField {
 
     public static void main(String[] args) {
         int[] x = {1,55,33,38,7,9,51,3,18,47,33};
-
     }
 
-    public static final Comparator<String> NAME_ORDER = new NameOrderComparator();
-
-    private static class NameOrderComparator implements Comparator<String> {
-        public int compare(String d1, String d2) {
-            return d1.compareTo(d2);
-        }
+    static void swap(int[] a, int idx1, int idx2) {
+        int temp = a[idx1];
+        a[idx1] = a[idx2];
+        a[idx2] = temp;
     }
 
     static void println(String txt) {
