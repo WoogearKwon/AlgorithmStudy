@@ -21,7 +21,7 @@ public class BinarySearchTreeTester {
         // 문자열을 반환합니다.
         public String toString() {
             return name;
-        }
+        } // clear
 
         // 데이터를 입력합니다.
         void scanData(String guide, int sw) {
