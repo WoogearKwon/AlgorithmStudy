@@ -1,6 +1,7 @@
 # 자료구조/알고리즘 공부 기록
 
 #### 참고 도서: 자료구조와 함께 배우는 알고리즘 입문 자바편 - 보요 시바타 (이지스퍼블리싱)
+Intellij IDEA에서 작성함
 
 <a href="https://www.bigocheatsheet.com/">Big O 그래프 및 정렬 알고리즘의 시간복잡도</a>
 
