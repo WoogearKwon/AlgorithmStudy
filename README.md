@@ -4,6 +4,7 @@
 Intellij IDEA에서 작성함
 
 <a href="https://www.bigocheatsheet.com/">Big O 그래프 및 정렬 알고리즘의 시간복잡도</a>
+
 ![BigO](img/bigO.png)
 
 ### n개의 여왕 알고리즘 (etc.QueenAlgorithm.java)
