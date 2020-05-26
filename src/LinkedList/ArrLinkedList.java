@@ -23,7 +23,7 @@ public class ArrLinkedList<E> {
     private int head;       // 머리 노드
     private int tail;       // 꼬리 노드
     private int current;    // 선택 노드
-    private int dHead;    // free 리스트의 머리 노드
+    private int dHead;      // free 리스트의 머리 노드
     private static final int NULL = -1; // 다음 노드 없음 / 리스트가 가득 참
 
     // constructor

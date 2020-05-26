@@ -53,8 +53,8 @@ public class HeapSort {
 
     static void downHeap(int[] a, int pRoot, int pLast) {
         int rootValue = a[pRoot]; // 루트(부모)
-        int pChild;                 // 큰 값을 가진 노드
-        int pParent;        // 부모
+        int pChild;               // 큰 값을 가진 노드
+        int pParent;              // 부모
 
         for (pParent = pRoot; pParent < (pLast + 1) / 2; pParent = pChild) {  // (pLast + 1) / 2 ===> 마지막 요소의 부모 노드까지만 반복함
             int cl = pParent * 2 + 1; // left child
@@ -79,22 +79,6 @@ public class HeapSort {
     }
 
     static void println(String txt) {
-        System.out.println(txt);
-    }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
-
-    static void println(boolean txt) {
-        System.out.println(txt);
-    }
-
-    static void print(String txt) {
-        System.out.print(txt);
-    }
-
-    static void print(int txt) {
         System.out.println(txt);
     }
 }

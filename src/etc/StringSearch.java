@@ -94,7 +94,6 @@ public class StringSearch {
      * 일치하지 않는 문자가 있으면 미리 준비한 표에 따라 패턴을 옮길 크기를 정함
      * 패턴에 존재할 수 있는 모든 문자의 옮길 크기를 계산 => 건너뛰기 표의 요소 개수 = Character.MAX_VALUE + 1
      * */
-
     static int bmMatch(String txt, String pat) {
         int pt;                     // txt 커서
         int pp;                     // pat 커서
@@ -108,27 +107,16 @@ public class StringSearch {
 
         //검색
         while (pt < txtLen) {
-            pp = n - 1;
+            pp = n - 1; // 초기화
 
             while (txt.charAt(pt) == pat.charAt(pp)) {
                 if (pp == 0) return pt; // 검색 성공
                 pp--;
                 pt--;
             }
+            // 건너뛸 칸의 개수 정의
             pt += (skip[txt.charAt(pt)] > n - pp) ? skip[txt.charAt(pt)] : n - pp;
         }
         return -1; // while 문이 종료되면 검색 실패
-    }
-
-    static void println(String txt) {
-        System.out.println(txt);
-    }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
-
-    static void println(boolean txt) {
-        System.out.println(txt);
     }
 }

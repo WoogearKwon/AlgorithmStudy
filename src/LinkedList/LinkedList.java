@@ -17,7 +17,7 @@ public class LinkedList<E> {
 
     private Node<E> head; // 머리 노드
     private Node<E> crnt; // 현재 선택한 노드 (검색한 노드를 선택, 삭제하는 등의 용도)
-    // if list is emptyu: (head==null)
+    // if list is empty: (head==null)
     // if list has one node only: head.next == null
     // if list has two nodes : head.next.next == null
 

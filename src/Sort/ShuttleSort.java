@@ -31,8 +31,4 @@ public class ShuttleSort {
     static void println(String txt) {
         System.out.println(txt);
     }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
 }

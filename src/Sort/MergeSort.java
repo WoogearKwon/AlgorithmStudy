@@ -10,54 +10,9 @@ public class MergeSort {
 
     // 시간 복잡도: O(nlog n) - O(nlog n) - O(nlog n)
     public static void main(String[] args) {
-//        executeMergeSort();
+        executeMergeSort();
 //        sortCalendar();
-        comparePhysicsData();
-    }
-
-    static void comparePhysicsData() {
-        PhysicsData[] x = {
-                new PhysicsData("David", 182, 0.3),
-                new PhysicsData("Eric", 194, 0.9),
-                new PhysicsData("John", 178, 1.0),
-                new PhysicsData("Hannah", 165, 1.4),
-                new PhysicsData("Michael", 204, 2.0),
-                new PhysicsData("Jennifer", 175, 1.0),
-                new PhysicsData("Woogear", 180, 1.4),
-        };
-
-        Arrays.sort(x, PhysicsData.HEIGHT_ORDER);
-
-        println("Physics Test Results");
-        println("name    height  vision");
-        println("-------------");
-        for (int i = 0; i < x.length; i++) {
-            System.out.printf("%-9s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
-        }
-    }
-
-    /**
-     자연 정렬
-     GregorianCalendar 클래스는 Comparable 인터페이스와 compareTo() 메서드를 구현함
-     1~12월을 0~11으로 표현 => 때문에 .get(MONTH)에 의해 얻는 값은 0~11이므로 출력할 때는 1을 더해야 한다.
-     */
-    static void sortCalendar() {
-        GregorianCalendar[] x = {
-                new GregorianCalendar(2017, Calendar.NOVEMBER, 1),
-                new GregorianCalendar(1963, Calendar.OCTOBER, 18),
-                new GregorianCalendar(1985, Calendar.APRIL, 5),
-                new GregorianCalendar(1985, Calendar.APRIL, 2),
-        };
-
-        Arrays.sort(x);
-
-        for (int i = 0; i < x.length; i ++) {
-            System.out.printf("%04d년 %02d월 %02d일\n",
-                    x[i].get(Calendar.YEAR),
-                    x[i].get(Calendar.MONTH) + 1, // 1을 더함
-                    x[i].get(Calendar.DATE)
-            );
-        }
+//        comparePhysicsData();
     }
 
     static void executeMergeSort() {
@@ -108,23 +63,52 @@ public class MergeSort {
         }
     }
 
+    static void comparePhysicsData() {
+        PhysicsData[] x = {
+                new PhysicsData("David", 182, 0.3),
+                new PhysicsData("Eric", 194, 0.9),
+                new PhysicsData("John", 178, 1.0),
+                new PhysicsData("Hannah", 165, 1.4),
+                new PhysicsData("Michael", 204, 2.0),
+                new PhysicsData("Jennifer", 175, 1.0),
+                new PhysicsData("Woogear", 180, 1.4),
+        };
+
+        Arrays.sort(x, PhysicsData.HEIGHT_ORDER);
+
+        println("Physics Test Results");
+        println("name    height  vision");
+        println("-------------");
+        for (int i = 0; i < x.length; i++) {
+            System.out.printf("%-9s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
+        }
+    }
+
+    /**
+     자연 정렬
+     GregorianCalendar 클래스는 Comparable 인터페이스와 compareTo() 메서드를 구현함
+     1~12월을 0~11으로 표현 => 때문에 .get(MONTH)에 의해 얻는 값은 0~11이므로 출력할 때는 1을 더해야 한다.
+     */
+    static void sortCalendar() {
+        GregorianCalendar[] x = {
+                new GregorianCalendar(2017, Calendar.NOVEMBER, 1),
+                new GregorianCalendar(1963, Calendar.OCTOBER, 18),
+                new GregorianCalendar(1985, Calendar.APRIL, 5),
+                new GregorianCalendar(1985, Calendar.APRIL, 2),
+        };
+
+        Arrays.sort(x);
+
+        for (int i = 0; i < x.length; i ++) {
+            System.out.printf("%04d년 %02d월 %02d일\n",
+                    x[i].get(Calendar.YEAR),
+                    x[i].get(Calendar.MONTH) + 1, // 1을 더함
+                    x[i].get(Calendar.DATE)
+            );
+        }
+    }
+
     static void println(String txt) {
-        System.out.println(txt);
-    }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
-
-    static void println(boolean txt) {
-        System.out.println(txt);
-    }
-
-    static void print(String txt) {
-        System.out.print(txt);
-    }
-
-    static void print(int txt) {
         System.out.println(txt);
     }
 

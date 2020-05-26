@@ -24,11 +24,11 @@ public class BubbleSort {
     }
 
     /**
-     개선4: 네번째 x[] 의 경우 bubbleSort3()을 사용해도 빠른 정렬이 안된다.
+     개선3: 네번째 x[] 의 경우 bubbleSort3()을 사용해도 빠른 정렬이 안된다.
      홀수번째 패스는 가장 작은 요소를 맨 앞으로 옮기고,
      짝수번째 패스는 가장 큰 요소를 맨 뒤로 옮기는 방식을 사용
      */
-    static void bubbleSort4(int[] x) {
+    static void bubbleSort3(int[] x) {
         int k = 0;
 
         while (k < n - 1) {
@@ -43,11 +43,6 @@ public class BubbleSort {
             // 한번의 정렬 계산이 끝나면 last를 K에 대입하여 다음에 수행할 계산 범위를 제한
             k = last;
         }
-    }
-
-    // 개선3: 앞쪽에 정렬이 끝난 부분이 있다면 순서대로 진행하지 않고 건너뛴다.
-    static void bubbleSort3(int[] x) {
-        int k = 0;
     }
 
     // 개선2: 정렬이 종료되면 루프를 종료시키도록 개선하여 불필요한 연산 감소
@@ -88,20 +83,4 @@ public class BubbleSort {
     static void println(String txt) {
         System.out.println(txt);
     }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
-
-    static void println(boolean txt) {
-        System.out.println(txt);
-    }
-
-    static void print(String txt) {
-        System.out.print(txt);
-    }
-
-//    static void print(int txt) {
-//        System.out.print(txt);
-//    }
 }

@@ -79,16 +79,16 @@ public class ChainHash<K,V> {
     public int remove(K key) {
         int hash = hashValue(key);
         Node<K,V> p = table[hash];
-        Node<K,V> pp = null;
+        Node<K,V> prev = null;
 
         while (p != null) {
             if (p.getKey().equals(key)) { // 찾음
-                if (pp == null)
+                if (prev == null)
                     table[hash] = p.next; // 기존 table[hash]와 p의 연결 끊어줌
                 else
-                    pp.next = p.next;
+                    prev.next = p.next;
             }
-            pp = p;
+            prev = p;
             p = p.next;
         }
         return 1;
@@ -106,6 +106,4 @@ public class ChainHash<K,V> {
             System.out.println();
         }
     }
-
-
 }

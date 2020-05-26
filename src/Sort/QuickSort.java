@@ -105,20 +105,4 @@ public class QuickSort {
     static void println(String txt) {
         System.out.println(txt);
     }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
-
-    static void println(boolean txt) {
-        System.out.println(txt);
-    }
-
-    static void print(String txt) {
-        System.out.print(txt);
-    }
-
-    static void print(int txt) {
-        System.out.println(txt);
-    }
 }

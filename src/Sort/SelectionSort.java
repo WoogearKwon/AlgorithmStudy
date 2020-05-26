@@ -39,12 +39,4 @@ public class SelectionSort {
     static void println(String txt) {
         System.out.println(txt);
     }
-
-    static void println(int txt) {
-        System.out.println(txt);
-    }
-
-    static void println(boolean txt) {
-        System.out.println(txt);
-    }
 }
