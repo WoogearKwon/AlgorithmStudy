@@ -1,10 +1,13 @@
-import com.sun.org.apache.xml.internal.utils.IntStack;
+import practices.Practice;
 
-public class PracticeField {
+import java.util.Stack;
+
+public class PracticeField extends Practice {
 
     static int[] buff;
 
-    public static void main(String[] args) {
+    @Override
+    public void run() {
         int[] x = {1,55,35,38,7,9,51,3,18,47,33};
         buff = new int[x.length];
 //        quickSort(x, 0, x.length - 1);
@@ -19,7 +22,6 @@ public class PracticeField {
             reverse.insert(0, a);
         }
         System.out.println(reverse);
-
     }
 
     static void heapSort(int[] a, int n) {
@@ -66,15 +68,15 @@ public class PracticeField {
     }
 
     static void quickSort(int[] a, int left, int right) {
-        IntStack lstack = new IntStack(right - left + 1);
-        IntStack rstack = new IntStack(right - left + 1);
+        Stack<Integer> lStack = new Stack<>();
+        Stack<Integer> rStack = new Stack<>();
 
-        lstack.push(left);
-        rstack.push(right);
+        lStack.push(left);
+        rStack.push(right);
 
-        while (!lstack.empty()) {
-            int pl = left = lstack.pop();
-            int pr = right = rstack.pop();
+        while (!lStack.empty()) {
+            int pl = left = lStack.pop();
+            int pr = right = rStack.pop();
             int x = a[(pl + pr) / 2];
 
             do {
@@ -84,13 +86,13 @@ public class PracticeField {
             } while (pl <= pr);
 
             if (left < pr) {
-                lstack.push(left);
-                rstack.push(pr);
+                lStack.push(left);
+                rStack.push(pr);
             }
 
             if (pl < right) {
-                lstack.push(pl);
-                rstack.push(right);
+                lStack.push(pl);
+                rStack.push(right);
             }
         }
     }
