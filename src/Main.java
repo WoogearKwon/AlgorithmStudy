@@ -1,4 +1,5 @@
 import practices.Sort.*;
+import practices.algorithm.PrimeNumber;
 import practices.etc.QueenAlgorithm;
 import practices.etc.StringSearch;
 import practices.Practice;
@@ -20,6 +21,7 @@ public class Main {
         practices.put(9, new ShellSort());
         practices.put(10, new ShuttleSort());
         practices.put(11, new PracticeField());
+        practices.put(12, new PrimeNumber());
 
         practices.get(practices.size() - 1).run();
     }
