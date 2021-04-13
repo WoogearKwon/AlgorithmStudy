@@ -18,7 +18,7 @@ public class MergeSort extends Practice {
 //        comparePhysicsData();
     }
 
-    static void executeMergeSort() {
+    private void executeMergeSort() {
 //        int[] x = {7,22,5,11,32,120,68,70};
         int[] x = {3,2,1};
         int n = x.length;
@@ -33,7 +33,7 @@ public class MergeSort extends Practice {
     }
 
     // 재귀적 병합 정렬
-    static void mergeSort(int[] a, int left, int right) {
+    private void mergeSort(int[] a, int left, int right) {
         if (left < right) {
             int i;
             int center = (left + right) / 2;
@@ -66,7 +66,7 @@ public class MergeSort extends Practice {
         }
     }
 
-    static void comparePhysicsData() {
+    private void comparePhysicsData() {
         PhysicsData[] x = {
                 new PhysicsData("David", 182, 0.3),
                 new PhysicsData("Eric", 194, 0.9),
@@ -92,7 +92,7 @@ public class MergeSort extends Practice {
      GregorianCalendar 클래스는 Comparable 인터페이스와 compareTo() 메서드를 구현함
      1~12월을 0~11으로 표현 => 때문에 .get(MONTH)에 의해 얻는 값은 0~11이므로 출력할 때는 1을 더해야 한다.
      */
-    static void sortCalendar() {
+    private void sortCalendar() {
         GregorianCalendar[] x = {
                 new GregorianCalendar(2017, Calendar.NOVEMBER, 1),
                 new GregorianCalendar(1963, Calendar.OCTOBER, 18),
@@ -109,10 +109,6 @@ public class MergeSort extends Practice {
                     x[i].get(Calendar.DATE)
             );
         }
-    }
-
-    static void println(String txt) {
-        System.out.println(txt);
     }
 
     static class PhysicsData {

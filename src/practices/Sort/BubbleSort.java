@@ -22,7 +22,7 @@ public class BubbleSort extends Practice {
 //        bubbleSort2(x);
         bubbleSort3(x);
 
-        println("\n-----FINISH SORITNG----");
+        println("\n-----FINISH SORTING----");
         printAnswer(Arrays.toString(x));
     }
 
