@@ -1,9 +1,6 @@
-import practices.Sort.*;
-import practices.algorithm.GreatestCommonDivisor;
-import practices.algorithm.PrimeNumber;
-import practices.etc.QueenAlgorithm;
-import practices.etc.StringSearch;
-import practices.Practice;
+import algorithm.Sort.*;
+import algorithm.*;
+import practice.Practice;
 
 import java.util.HashMap;
 

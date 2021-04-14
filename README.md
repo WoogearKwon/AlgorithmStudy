@@ -7,7 +7,7 @@ Intellij IDEA에서 작성함
 
 ![BigO](img/bigO.png)
 
-### n개의 여왕 알고리즘 (practices.etc.QueenAlgorithm.java)
+### n개의 여왕 알고리즘 (algorithm.QueenAlgorithm.java)
 - 각 행과 열에 퀸을 하나씩 놓되, 서로 잡아먹을 수 없도록 위치하는 경우의 수 구하기
 
 ## 정렬 
@@ -16,37 +16,37 @@ Intellij IDEA에서 작성함
 - 내부 정렬: 정렬할 모든 데이터를 하나의 배열에 저장할 수 있는 경우에 사용할 수 있는 알고리즘
 - 외부 정렬: 데이터가 너무 많아서 하나의 배열에 저장할 수 없는 경우에 사용하는 알고리즘
 - 정렬 알고리즘의 핵심 요소: 교환, 선택, 삽입
-#### 버블정렬 (practices.Sort.BubbleSort.java)
+#### 버블정렬 (algorithm.Sort.BubbleSort.java)
 - 이웃한 두 요소의 대소관계를 비교하여 교환을 반복함
 - 알고리즘 개선1: 내부 for문에서 교환이 이루어지지 않았다면 정렬 종료
 - 알고리즘 개선2: 정렬을 마친 요소의 인덱스를 기억했다가 다음 수행할 검사의 범위를 제한
 
-#### 단순선택정렬 (practices.Sort.SelectionSort.java)
+#### 단순선택정렬 (algorithm.Sort.SelectionSort.java)
 - 가장 작은 요소부터 시작해 알맞은 위치로 옮겨서 순서대로 정렬
 
-#### 단순삽입 정렬/셔틀정렬 (practices.Sort.ShuttleSort.java)
+#### 단순삽입 정렬/셔틀정렬 (algorithm.Sort.ShuttleSort.java)
 - 선택한 요소를 앞쪽의 알맞은 위치 삽입하는 작업을 반복
 - 단점: 삽입할 위치가 멀리 떨어져 있으면 이동해야 하는 횟수가 많아짐
 
-#### 셸 정렬(practices.Sort.ShellSort.java)
+#### 셸 정렬(algorithm.Sort.ShellSort.java)
 - 단순 삽입 정렬을 개선해서 속도를 빠르게 함
 - 증분값(h)을 기준으로 그룹을 나눠 정렬하고 증분값을 감소시켜서 다시 정렬하는 과정 반복
 - 점점 정렬된 상태에 가까워짐
 - 단순삽입정렬에 비해서는 매우 빠르지만 멀리 떨어져 있는 요소를 교환해야 하므로 안정적이지 않음
 
-#### 퀵 정렬 (practices.Sort.QuickSort.java)
+#### 퀵 정렬 (algorithm.Sort.QuickSort.java)
 - 피벗 기준으로 한 분할 정복 => 한 부분씩 점차적으로 정렬하는 방식
 - 피벗값을 기준으로 좌우 정렬(swap) 후, 좌/우 각각의 피벗값을 기준으로 정렬하는 과정 반복 
 - 재귀적/비재귀적 두 가지 방법
 - 피벗 값에 따라 최악의 경우 O(n^2)의 시간복잡도를 가질 수 있음
  
-#### 병합 정렬 (practices.Sort.MergeSort.java) 
+#### 병합 정렬 (algorithm.Sort.MergeSort.java) 
 - 중앙값을 기준으로 분할 정렬 후 병합 과정 반복
 - 쪼갤 수 있는 가장 작은 단위(2개)까지 계속 분할
 - 작업용 배열에 좌측 배열 복사 후 우측배열과 비교하며 정렬
 - 정렬되면 쪼갠 순서 역순으로 반복
 
-#### 힙 정렬 (practices.Sort.HeapSort.java)
+#### 힙 정렬 (algorithm.Sort.HeapSort.java)
 - 힙은 완전이진트리 (부모의 값은 자식의 값보다 항상 큼, 혹은 작음) 
 - 부모의 값 >= 자식의 값
 - 배열을 힙상태로 만든 후 힙의 특성을 사용해서 정렬
@@ -55,14 +55,14 @@ Intellij IDEA에서 작성함
 - 정렬 순서: 배열을 힙상태로 만듦 -> a[0]은 max값이므로 배열 마지막(n-1)과 swap의 과정을 범위를 좁혀가며 반복
 - 불안정한 정렬
 
-#### 도수 정렬 (practices.Sort.FrequencySort.java) 
+#### 도수 정렬 (algorithm.Sort.FrequencySort.java) 
 - 데이터 비교, 교환 작업이 필요없어 매우 빠름
 - 단일 for루프만 사용 
 - 최솟값 혹은 최대값을 알아야함
 - if문 대신 for문만을 사용해 정렬할 수 있는 
 - 도수분포표 -> 누적도수분포표 -> 목적배열 -> 배열 복사 순서로 정렬
 
-#### 기수 정렬 (Radix practices.Sort)
+#### 기수 정렬 (Radix algorithm.Sort)
 - 매우 빠른 정렬 알고리즘
 - 시간 복잡도 O(n)
 - 자리수를 기준으로 Queue를 이용해 정렬해가는 방식
@@ -70,10 +70,10 @@ Intellij IDEA에서 작성함
 - 메모리 소비가 큼
 - 속도는 빠르나 여러가지 조건으로 인해 실제 사용성은 떨어짐
 
-## 집합 (practices.etc.IntSet.java)
-#### practices.etc.IntSet : 배열로 집합 클래스 만들기
+## 집합 (data_structure.etc.IntSet.java)
+#### data_structure.etc.IntSet : 배열로 집합 클래스 만들기
 
-## 문자열 검색 (practices.etc.StringSearch.java)
+## 문자열 검색 (algorithm.StringSearch.java)
 #### 브루트-포스법
 - 텍스트에서 패턴을 검색하는 단순하고 쉬운 알고리즘
 - 성능은 좋지 않음 
@@ -152,7 +152,7 @@ Intellij IDEA에서 작성함
 - 해시법은 데이터를 저장할 위치(인덱스)를 간단한 연산으로 구하는 방법
 - 해시값: 배열의 키 값을 배열의 요소수로 나눈 나머지, 데이터에 접근할 때 사용
 - 해시 테이블: 해시값이 인덱스가 되도록 원래의 키 값을 저장한 배열
-- 해시 함수(practices.hash function): 키 값을 가지고 해시 값을 만드는 과정
+- 해시 함수(data_structure.etc.hash function): 키 값을 가지고 해시 값을 만드는 과정
 - 버킷(bucket): 해시 테이블의 각 요소
 - 충돌(collision): 저장할 버킷이 중복되는 현상. 키값과 해시값은 반드시 1대1 관계가 아니기 때문
 
@@ -166,7 +166,7 @@ Intellij IDEA에서 작성함
 - 체인해시 테스터 (Tree.ChainHashTester.java)
 - 아래 그림은 값을 13으로 나누었을 때의 나머지를 해시값으로 가짐
 - 예) 69, 17은 13으로 나누었을 때 나머지가 4이기 때문에 같은 해시값을 가짐 
-<br/><img src="img/practices.hash.png" alt="chain practices.hash"><br/>
+<br/><img src="img/data_structure.etc.hash.png" alt="chain data_structure.etc.hash"><br/>
 
 #### 오픈 주소법 Open Addressing
 - 충돌이 발생했을 때 재해시(rehashing)를 수행하여 비어있는 버킷을 찾아내는 방법

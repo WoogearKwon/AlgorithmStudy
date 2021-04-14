@@ -1,4 +1,4 @@
-import practices.Practice;
+import practice.Practice;
 
 import java.util.Stack;
 
