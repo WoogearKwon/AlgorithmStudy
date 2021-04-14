@@ -1,4 +1,5 @@
 import practices.Sort.*;
+import practices.algorithm.GreatestCommonDivisor;
 import practices.algorithm.PrimeNumber;
 import practices.etc.QueenAlgorithm;
 import practices.etc.StringSearch;
@@ -22,6 +23,7 @@ public class Main {
         practices.put(10, new ShuttleSort());
         practices.put(11, new PracticeField());
         practices.put(12, new PrimeNumber());
+        practices.put(13, new GreatestCommonDivisor());
 
         practices.get(practices.size() - 1).run();
     }
