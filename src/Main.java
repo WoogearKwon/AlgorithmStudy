@@ -21,6 +21,7 @@ public class Main {
         practices.put(11, new PracticeField());
         practices.put(12, new PrimeNumber());
         practices.put(13, new GreatestCommonDivisor());
+        practices.put(14, new Fibonacci());
 
         practices.get(practices.size() - 1).run();
     }

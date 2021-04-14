@@ -29,6 +29,10 @@ public abstract class Practice implements Testable {
         System.out.println(txt);
     }
 
+    protected void println(int numb) {
+        System.out.println(numb);
+    }
+
     protected void print(String txt) {
         System.out.print(txt);
     }
