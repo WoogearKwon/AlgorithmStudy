@@ -1,4 +1,4 @@
-import algorithm.Sort.*;
+import algorithm.sort.*;
 import algorithm.*;
 import practice.Practice;
 

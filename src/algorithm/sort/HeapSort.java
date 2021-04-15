@@ -1,4 +1,4 @@
-package algorithm.Sort;
+package algorithm.sort;
 
 import practice.Practice;
 
