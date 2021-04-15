@@ -1,6 +1,7 @@
 # 알고리즘 공부 기록
 
 <a href="https://www.bigocheatsheet.com/">Big O 그래프 및 정렬 알고리즘의 시간복잡도</a>
+
 ![BigO](images/bigO.png)
 
 - [정렬](/sort/README.md)
