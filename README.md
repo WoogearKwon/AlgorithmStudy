@@ -166,7 +166,7 @@ Intellij IDEA에서 작성함
 - 체인해시 테스터 (Tree.ChainHashTester.java)
 - 아래 그림은 값을 13으로 나누었을 때의 나머지를 해시값으로 가짐
 - 예) 69, 17은 13으로 나누었을 때 나머지가 4이기 때문에 같은 해시값을 가짐 
-<br/><img src="img/data_structure.etc.hash.png" alt="chain data_structure.etc.hash"><br/>
+<br/><img src="img/hash.png" alt="hash"><br/>
 
 #### 오픈 주소법 Open Addressing
 - 충돌이 발생했을 때 재해시(rehashing)를 수행하여 비어있는 버킷을 찾아내는 방법
