@@ -83,7 +83,7 @@ public class MergeSort extends Practice {
         println("name    height  vision");
         println("-------------");
         for (int i = 0; i < x.length; i++) {
-            System.out.printf("%-9s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
+            printf("%-9s%3d%5.1f\n", x[i].name, x[i].height, x[i].vision);
         }
     }
 
@@ -103,7 +103,7 @@ public class MergeSort extends Practice {
         Arrays.sort(x);
 
         for (int i = 0; i < x.length; i ++) {
-            System.out.printf("%04d년 %02d월 %02d일\n",
+            printf("%04d년 %02d월 %02d일\n",
                     x[i].get(Calendar.YEAR),
                     x[i].get(Calendar.MONTH) + 1, // 1을 더함
                     x[i].get(Calendar.DATE)

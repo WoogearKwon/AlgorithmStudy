@@ -61,7 +61,7 @@ public class Fibonacci extends Practice {
         int sum = 1;
 
         for (int i = 0; i < n; i++) {
-            System.out.print(sum + " ");
+            print(sum + " ");
             sum = num1 + num2;
             num1 = num2;
             num2 = sum;

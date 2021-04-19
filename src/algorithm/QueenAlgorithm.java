@@ -30,7 +30,7 @@ public class QueenAlgorithm extends Practice {
     }
 
     private void print() {
-        for (int i = 0; i < n; i ++) System.out.print(pos[i] + " ");
+        for (int i = 0; i < n; i ++) print(pos[i] + " ");
 //        for (int i = 0; i < pos.length; i ++) {
 //            for (int j = 0; j < pos.length; j ++) {
 //                print(pos[i] == j ? "■ " : "□ ");

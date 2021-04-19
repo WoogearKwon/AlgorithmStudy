@@ -42,7 +42,7 @@ public class PrimeNumber extends Practice {
 
         // 이제 sieve에 남은 숫자(0이 아닌 숫자)는 모두 소수이다.
         for (int i = 2; i <= totalNumber ; i++) {
-            if (sieve[i] != 0) System.out.printf("%d ", sieve[i]);
+            if (sieve[i] != 0) printf("%d ", sieve[i]);
         }
     }
 }

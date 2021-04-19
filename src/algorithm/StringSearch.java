@@ -17,21 +17,21 @@ public class StringSearch extends Practice {
         int idx = bmMatch(text, pattern);
 
         if (idx == -1)
-            System.out.println("텍스트에 패턴이 없습니다.");
+            println("텍스트에 패턴이 없습니다.");
         else {
             printResult(idx, text, pattern);
         }
     }
 
-    static void printResult(int idx, String text, String pattern) {
+    private void printResult(int idx, String text, String pattern) {
         int len = 0;
         for (int i = 0; i < idx; i++)
             len += text.substring(i, i + 1).getBytes().length;
         len += pattern.length();
 
-        System.out.println((idx + 1) + "번째 문자와 일치합니다.");
-        System.out.println("text : " + text);
-        System.out.printf(String.format("patt : %%%ds\n", len), pattern);
+        println((idx + 1) + "번째 문자와 일치합니다.");
+        println("text : " + text);
+        printf(String.format("patt : %%%ds\n", len), pattern);
     }
 
     /**
