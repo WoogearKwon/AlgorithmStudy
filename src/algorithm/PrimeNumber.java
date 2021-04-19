@@ -13,11 +13,11 @@ public class PrimeNumber extends Practice {
     private void isPrimeNumber(int number) {
         for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
-                System.out.printf("%d is NOT a prime number", number);
+                printf("%d is NOT a prime number", number);
                 return;
             }
         }
-        System.out.printf("%d is a prime number", number);
+        printf("%d is a prime number", number);
     }
 
     // 에라토스테네스의 채 (Sieve of Eratosthenes)
