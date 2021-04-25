@@ -4,7 +4,7 @@ public abstract class Practice implements Testable {
     private final String printAnswerFormat = getClass().getSimpleName() + " 정답:\n";
 
     protected void printAnswer (Object result) {
-        System.out.println(printAnswerFormat + result);
+        println(printAnswerFormat + result);
     }
 
     protected void println(Object numb) {
