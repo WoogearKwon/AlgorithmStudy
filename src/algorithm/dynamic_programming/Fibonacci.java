@@ -36,7 +36,7 @@ public class Fibonacci extends Practice {
 
     /**
      * 피보나치 수열(재귀호출 2)
-     * 메모리를 사용하여 중복은 계산하지 않도록 수정한 피보나치 수열
+     * 메모리를 사용하여 이미 한번 구한 값은 다시 구하지 않도록 수정한 피보나치 수열
      * 시간복잡도: O(N) => 문제의 개수 * 문제 1개를 푸는 시간
      * */
     private int fiboFast(int n) {
