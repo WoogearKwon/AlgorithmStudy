@@ -9,14 +9,14 @@ public class Fibonacci extends Practice {
 
     @Override
     public void run() {
-//        runRecursive(8);
-        runLoopFibonacci(8);
+        runRecursive(80);
+//        runLoopFibonacci(40);
     }
 
     private void runRecursive(int n) {
-        for (int i = 1; i <= 8; i++) {
-            print(fibo(i) + " ");
-//            print(fiboFast(i) + " ");
+        for (int i = 1; i <= n; i++) {
+//            print(fibo(i) + " ");
+            print(fiboFaster(i) + " ");
         }
     }
 
@@ -39,7 +39,7 @@ public class Fibonacci extends Practice {
      * 메모리를 사용하여 이미 한번 구한 값은 다시 구하지 않도록 수정한 피보나치 수열
      * 시간복잡도: O(N) => 문제의 개수 * 문제 1개를 푸는 시간
      * */
-    private int fiboFast(int n) {
+    private int fiboFaster(int n) {
         if (n <= 1) {
             return n;
         } else {
@@ -47,7 +47,7 @@ public class Fibonacci extends Practice {
                 // 저장된 데이터가 있으면 리턴
                 return memo[n];
             }
-            memo[n] = fiboFast(n - 1) + fiboFast(n - 2);
+            memo[n] = fiboFaster(n - 1) + fiboFaster(n - 2);
             return memo[n];
         }
     }
