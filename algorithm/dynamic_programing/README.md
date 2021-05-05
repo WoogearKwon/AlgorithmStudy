@@ -29,7 +29,7 @@ Fn = (Fn-1) + (Fn-2)
 - 반복하다보면 큰 문제를 풀 수 있음
 - 반복문을 사용
 
-### 재귀호출을 이용한 피보나치 수열 알고리즘
+재귀호출을 이용한 피보나치 수열 알고리즘 코드(아래)
 ```java
 int[] memo = new int[100];
 int fiboFast(int n) {
@@ -46,7 +46,7 @@ int fiboFast(int n) {
 }
 ```
 
-### 반복문을 이용한 피보나치 수열 알고리즘
+반복문을 이용한 피보나치 수열 알고리즘 코드(아래)
 ```java
 void runLoopFibonacci(int n) {
     int num1 = 0;
