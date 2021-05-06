@@ -2,12 +2,12 @@
 
 ## 연결리스트 
 #### 포인터로 만든 연결리스트
-- [LinkedList.java](/src/data_structure/linked_list/LinkedList.java)
+- [LinkedList.java](/data_structure/linked_list/LinkedList.java)
 - 각 노드의 포인터는 다음 노드를 가리킴 (객체 참조)
 - 메모리 영역을 만들고 해제하는 비용이 듬
 - 포인터로 만든 연결리스트 테스터 (LinkedList.LinkedListTester.java)
 #### 커서로 만든 연결 리스트
-- [ArrLinkedList.java](/src/data_structure/linked_list/ArrLinkedList.java)
+- [ArrLinkedList.java](/data_structure/linked_list/ArrLinkedList.java)
 - 리스트를 배열로 구현
 - 데이터 수가 크게 바뀌지 않고 데이터 수의 최댓값을 미리 알 수 있을 경우 효율적
 - 커서는 다음 노드에 대한 포인터가 아니라 다음 요소가 들어있는 인덱스 값
@@ -16,7 +16,7 @@
 - 연결리스트 테스터 (LinkedList.ArrLinkedListTester.java)
 
 #### 원형 이중 연결리스트
-- [DoubleLinkedList.java](/src/data_structure/linked_list/DoubleLinkedList.java)
+- [DoubleLinkedList.java](/data_structure/linked_list/DoubleLinkedList.java)
 - 노드의 앞쪽(prev)과 다음(next)를 검색할 수 있음
 - head는 더미노드를 가리킴
 - head.prev()는 꼬리 노드를, head.next()는 머리 노드를 선택노드로 변경
@@ -53,7 +53,7 @@
 - 마지막 레벨은 왼쪽부터 오른쪽 방향으로 노드를 채우되 끝까지 채울 필요는 없음
 
 #### 이진검색트리
-- [BinarySearchTree.java](/src/data_structure/tree/BinarySearchTree.java)
+- [BinarySearchTree.java](/data_structure/tree/BinarySearchTree.java)
 - 어떤 노드 N을 기준으로 왼쪽 서브트리 노드의 모든 키 값은 노드 N의 키 값보다 작아야 함
 - 레벨을 가득 채울 필요 없음
 - 오른쪽 서브 트리 노드의 키 값은 노드 N의 키 값보다 커야 함
@@ -79,7 +79,7 @@
 - 오픈 주소법: 빈 버킷을 찾을 때까지 해시를 반복
 
 #### 체인법 Chaining, Open hashing
-- [ChainHash.java](/src/data_structure/hash/ChainHash.java)
+- [ChainHash.java](/data_structure/hash/ChainHash.java)
 - 같은 해시 값을 갖는 데이터를 연결 리스트에 의해 사슬모양으로 연결
 - 오픈 해시법(open hashing)이라고도 함
 - 체인해시 테스터 (Tree.ChainHashTester.java)

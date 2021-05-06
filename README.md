@@ -11,5 +11,5 @@
 - Main.java에서 실행하고자 하는 예시의 key로 접근하고 run()을 호출해 실행한다.
 
 ## Contents
-- [알고리즘](/algorithm/README.md)
-- [자료구조](/data_stucture/README.md)
+- [알고리즘](/contents/algorithm.md)
+- [자료구조](/contents/data_structure.md)
