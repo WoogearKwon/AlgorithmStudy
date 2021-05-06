@@ -10,43 +10,43 @@
 ![BigO](images/bigO.png)
 
 #### 버블정렬 (Bubble Sort) 
-- [소스코드](/algorithm/sort/BubbleSort.java)
+- [소스코드](/src/algorithm/sort/BubbleSort.java)
 - 이웃한 두 요소의 대소관계를 비교하여 교환을 반복함
 - 알고리즘 개선1: 내부 for문에서 교환이 이루어지지 않았다면 정렬 종료
 - 알고리즘 개선2: 정렬을 마친 요소의 인덱스를 기억했다가 다음 수행할 검사의 범위를 제한
 
 #### 단순선택정렬 (Selection Sort)
-- [소스코드](/algorithm/sort/SelectionSort.java)
+- [소스코드](/src/algorithm/sort/SelectionSort.java)
 - 가장 작은 요소부터 시작해 알맞은 위치로 옮겨서 순서대로 정렬
 
 #### 단순삽입 정렬/셔틀정렬 (Shuttle Sort)
-- [소스코드](/algorithm/sort/ShuttleSort.java)
+- [소스코드](/src/algorithm/sort/ShuttleSort.java)
 - 선택한 요소를 앞쪽의 알맞은 위치 삽입하는 작업을 반복
 - 단점: 삽입할 위치가 멀리 떨어져 있으면 이동해야 하는 횟수가 많아짐
 
 #### 셸 정렬 (Shell SOrt)
-- [소스코드](/algorithm/sort/ShellSort.java)
+- [소스코드](/src/algorithm/sort/ShellSort.java)
 - 단순 삽입 정렬을 개선해서 속도를 빠르게 함
 - 증분값(h)을 기준으로 그룹을 나눠 정렬하고 증분값을 감소시켜서 다시 정렬하는 과정 반복
 - 점점 정렬된 상태에 가까워짐
 - 단순삽입정렬에 비해서는 매우 빠르지만 멀리 떨어져 있는 요소를 교환해야 하므로 안정적이지 않음
 
 #### 퀵 정렬 (Quick Sort)
-- [소스코드](/algorithm/sort/QuickSort.java)
+- [소스코드](/src/algorithm/sort/QuickSort.java)
 - 피벗 기준으로 한 분할 정복 => 한 부분씩 점차적으로 정렬하는 방식
 - 피벗값을 기준으로 좌우 정렬(swap) 후, 좌/우 각각의 피벗값을 기준으로 정렬하는 과정 반복 
 - 재귀적/비재귀적 두 가지 방법
 - 피벗 값에 따라 최악의 경우 O(n^2)의 시간복잡도를 가질 수 있음
  
 #### 병합 정렬 (Merge Sort)
-- [소스코드](/algorithm/sort/MergeSort.java)
+- [소스코드](/src/algorithm/sort/MergeSort.java)
 - 중앙값을 기준으로 분할 정렬 후 병합 과정 반복
 - 쪼갤 수 있는 가장 작은 단위(2개)까지 계속 분할
 - 작업용 배열에 좌측 배열 복사 후 우측배열과 비교하며 정렬
 - 정렬되면 쪼갠 순서 역순으로 반복
 
 #### 힙 정렬 (Heap Sort)
-- [소스코드](/algorithm/sort/HeapSort.java)
+- [소스코드](/src/algorithm/sort/HeapSort.java)
 - 힙은 완전이진트리 (부모의 값은 자식의 값보다 항상 큼, 혹은 작음) 
 - 부모의 값 >= 자식의 값
 - 배열을 힙상태로 만든 후 힙의 특성을 사용해서 정렬
@@ -56,7 +56,7 @@
 - 불안정한 정렬
 
 #### 도수 정렬 (Frequency Sort)
-- [소스코드](/algorithm/sort/FrequencySort.java)
+- [소스코드](/src/algorithm/sort/FrequencySort.java)
 - 데이터 비교, 교환 작업이 필요없어 매우 빠름
 - 단일 for루프만 사용 
 - 최솟값 혹은 최대값을 알아야함
