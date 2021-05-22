@@ -1,4 +1,4 @@
-#그래프(Graph)
+# 그래프(Graph)
 - 자료구조의 일종
 - 정점(Node, Vertex)
 - 간선(Edge): 정점간의 관계를 나타낸다.
@@ -14,12 +14,14 @@
 ### 방향 있는 그래프(Directed Graph)
 - A->C와 같이 간선에 방향이 있다.
 - A->C는 있지만 C->A는 없다.
+
 ![BigO](images/directed_graph.png)
 
 ### 방향 없는 그래프(Undirected Graph)
 - A-C와 같이 간선에 방향이 없다.
 - A-C는 A->C와 C->A를 나타낸다.
 - 양방향 그래프(Bidirection Graph)라고도 한다.
+
 ![BigO](images/undirected_graph.png)
 
 
@@ -27,12 +29,14 @@
 - 간선 써있는 어떤 값
 - `A에서 B로` 이동하는 거리, 이동하는 시간, 비용 등을 의미
 - 가중치가 명시되어있지 않은 경우에는 1이라고 생각
+
 ![BigO](images/weight.png)
 
 ### 차수(Degree)
 - 정점과 연결되어 있는 간선의 개수
 - 4의 In-degree: 3
 - 4의 Out-degree: 1
+
 ![BigO](images/graph_degree.png)
 
 ## 그래프의 표현
@@ -40,5 +44,6 @@
 - 간선에 방향이 없기 때문에, 방향이 없는 그래프
 - 정점: {1, 2, 3, 4, 5, 6} `// 간선의 수를 저장`
 - 간선: {(1,2), (1,5), (2,5), (2,3), (3,4), (2,4), (4,5), (4,6)}
+
 ![BigO](images/graph_representation.png)
 
