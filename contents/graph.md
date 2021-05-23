@@ -47,3 +47,94 @@
 
 ![BigO](images/graph_representation.png)
 
+## 그래프 저장 방법
+### 1. 인접 행렬(Adjacency-matrix)
+- 점점의 개수를 V라고 했을 때
+- V x V 크기의 이차원 배열을 이용
+- A[i][j] = 1 (i->j 간선이 있을 때), 0(없을 때)
+- 공간복잡도: O(V^2) `// 이차원배열이기 때문`
+- 하나의 정점과 연결된 모든 간선을 구하는 시간: O(V)
+- 임의의 두 정점 사이에 간선의 존재 유무를 구하는 시간이 인접리스트에 비해 빠름
+
+![BigO](images/adjacency_matrix.png)
+
+### 2. 인접 리스트(Adjacency-list)
+- 리스트를 이용해서 구현한다.
+- A[i]=i 와 연결된 정점을 리스트로 포함하고 있음 
+    - 리스트를 사용하는 이유: 간선이 몇개가 있을지 알 수 없기 때문
+- 가중치가 있는 경우 간선 정점 번호와 가중치를 함께 저장
+- Java에서는 ArrayList, C++에서는 Vector, Python에서는 list를 사용
+- 인접 행렬에 비해서 공간복잡도와 시간복잡도가 우수하기 때문에 보통 사용
+
+## 그래프의 탐색
+목적: 임의의 정점에서 시작해서 연결되어있는 모든 정점을 `한 번씩` 방문하는 것
+### 1. DFS(Depth First Search, 깊이 우선 탐색)
+- 하나의 정점에서 시작해서 최대한 깊이 방문하고 더 이상 갈 곳이 없으면 돌아와서 진행하는 방식
+- Stack을 사용
+- Stack의 역할: 더 이상 갈 곳이 없을 때 어디로 돌아가야 하는지 기록
+- 더 이상 방문할 곳이 없는 정점은 stack에서 제거
+- 방문한 정점을 기록하는 배열이 필요: ex) int[] check
+- stack이 empty가 되면 탐색 종료 (모든 정점 방문 완료)
+- 재귀함수 사용
+- 인접 행렬를 이용한 구현
+```java
+void dfs(int x) {
+    check[x] = true;
+    for (int i = 1; i <= n; i++) {
+        if (a[x][i] == 1 && check[i] == false) {
+            dfs(i);
+        }
+    }
+}
+```
+- 인접 리스트를 이용한 구현
+```java
+void dfs(int x) {
+    check[x] = true;
+    for (int i = 0; i < a[x].size(); i++) {
+        int y = a[x][i];
+        if (check[y] == false) {
+            dfs(y);
+        }
+    }
+}
+```
+### 2. BFS(Breadth First Search, 너비 우선 탐색)
+- 한 번에 여러 정점을 방문하는 방식 
+- Queue를 사용
+- 큐를 이용해서 지금 위치에서 갈 수 있는 것을 모두 큐에 넣는 방식
+- 큐에 넣을 때 방문했다고 체크해야 함
+- 큐가 empty되면 탐색 종료 (모든 정점 방문 완료)
+- 인접 행렬을 이용한 구현
+```java
+Queue<Integer> q;
+check[1] = true; 
+q.push(1); 
+while (!q.empty()) {
+    int x = q.front();
+    q.pop();
+    for (int i = 1; i <= n; i++) {
+        if (a[x][i] == 1 && check[i] == false) {
+            check[i] = true;
+            q.push(i);
+        }
+    }
+}
+```
+- 인접 리스트를 이용한 구현
+```java
+Queue<Integer> q;
+check[1] = true; 
+q.push(1); 
+while (!q.empty()) {
+    int x = q.front();
+    q.pop();
+    for (int i = 0; i < a[x].size(); i++) {
+        int y = a[x][i];
+        if (check[y] == false) {
+            check[y] = true;
+            q.push(y);
+        }
+    }
+}
+```
